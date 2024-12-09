@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        /* 기본 폰트를 Google Fonts의 Archivo로 설정 */
+        body {
+    font-family: 'Archivo', 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 배치 */
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+        html, body {
+        height: 100%; /* html과 body가 화면 전체를 차지하게 설정 */
+        margin: 0; /* 기본 여백 제거 */
+    }
+
+        /* 기본 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .archivo {
+            font-family: "Archivo", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+                font-style: normal;
+                font-variation-settings:
+                "wdth" 100;
+            }
+
+            body {
+    font-family: 'Archivo', 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    min-height: 100vh;
+    background-color: #000000;
+    position: relative; /* header의 절대 위치를 기준으로 설정 */
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 좌우로 요소 배치 */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    padding: 8px 35px;
+    background-color: rgba(255, 255, 255, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden; /* 내용 넘침 방지 */
+}
+
+/* 왼쪽 아이템 스타일 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+}
+
+.nav-image {
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image:hover {
+    transform: scale(1.1);
+}
+
+/* 오른쪽 버튼 스타일 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+    margin-right: 80px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+
+main {
+    position: absolute; /* header를 고정 */
+    top: 200px; /* 위쪽 여백 */
+    left: 130px; /* 왼쪽 여백 */
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    gap: 60px;
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: top;
+    font-size: 45px;
+    line-height: 1.3;
+    flex-direction: column;
+    letter-spacing: -1px;
+}
+
+.introduce-detail{
+background: linear-gradient(90deg, #fff1f7, #ff758c);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   transition: background 0.2s ease;
+}
+
+.introduce-detail2{
+background: linear-gradient(90deg, #fff1f7, #75b8ff);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   transition: background 0.2s ease;
+}
+
+
+.text{
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: top;
+    font-size: 25px;
+    line-height: 1.3;
+    flex-direction: column;
+    letter-spacing: -1px;
+    gap: 15px;
+}
+
+.list{
+    color: #b9b9b9;
+    letter-spacing: -0.5px;
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 정렬 */
+    align-items: top;
+    font-size: 22px;
+    line-height: 2.4;
+    flex-direction: column;
+    letter-spacing: -1px;
+    word-wrap: break-word; /* 텍스트가 화면을 넘지 않도록 설정 */
+    margin-right: 60px;
+}
+
+.award-item {
+    font-size: 22px;
+    display: flex; /* Chip과 텍스트를 같은 라인에 배치 */
+    align-items: center; /* 텍스트와 Chip 수직 정렬 */
+    flex-wrap: wrap; /* 줄이 넘칠 경우 자동으로 줄 바꿈 */
+}
+
+.career{
+    margin-top: 50px;
+}
+
+.award{
+    margin-top: 60px;
+    margin-bottom:150px;
+}
+
+.chip {
+    margin-left: 10px; /* 텍스트와 Chip 사이 간격 */
+    padding: 3px 10px; /* Chip 내부 여백 */
+    font-size: 14px; /* Chip 텍스트 크기 */
+    color: rgb(255, 255, 255); /* 텍스트 색상 */
+    background-color: #2c2c2c; /* Chip 배경색 (초록색) */
+    border-radius: 20px; /* 둥근 모서리 */
+    display: inline-block; /* Chip을 인라인 블록으로 설정 */
+    transition: background-color 0.3s ease; /* 색상 전환 효과 */
+    letter-spacing: -0.3px;
+    white-space: nowrap; /* 칩 내부 텍스트 줄바꿈 방지 */
+}
+
+
+        /* 반응형 스타일 */
+        @media (max-width: 767px) {
+            main {
+                position: absolute; /* header를 고정 */
+                 top: 200px; /* 위쪽 여백 */
+                 left: 60px; /* 왼쪽 여백 */
+                flex-direction: column;
+                align-items: flex-start; /* 왼쪽 정렬 */
+                gap: 50px;
+                font-size:35px;
+            }
+
+            .list {
+        font-size: 18px; /* 더 작은 화면에서 텍스트 크기를 더 줄임 */
+        line-height: 1.8; /* 줄 간격도 더 줄임 */
+    }
+
+    .award{
+    margin-top: 50px;
+    margin-bottom:120px;
+}
+
+.award-item {
+        flex-wrap: wrap; /* 칩과 텍스트가 넘칠 경우 줄바꿈 */
+    }
+    
+        }
+     
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+        <a href="index.html">
+          <img src="logo.svg" alt="Hwajeong" class="nav-image">
+        </div>
+      </a>
+      <div class="nav-right">
+        <a href="profile.html" class="nav-button">About me</a>
+    </div>
+    </nav>
+    <div class="container">
+        <main>
+            <div class="introduce-detail">
+                <p>Creative
+                    <br>창의적으로 문제를 해결합니다</p>
+            </div>
+            <div class="introduce-detail2">
+                <p>Hardworking
+                    <br>꾸준하게 노력합니다</p>
+            </div>
+            
+            <div class="career">
+                <p class="text">Careers</p>
+                <div class="list">
+                    <div class="award-item">
+                    2024.08-09 SWING 디자인 인턴 <span class="chip">구독 전환 페이지 디자인</span><span class="chip">신규 서비스 가입 플로우</span>
+                </div>
+                <div class="award-item">
+                    2024.02-2024.07 SK증권 기획, 디자인 인턴 <span class="chip">아이콘 디자인</span><span class="chip">신규 서비스 홍보안 기획</span>
+                </div>
+                <div class="award-item">
+                   2023.10-2024.02 에이슬립 디자인 인턴 <span class="chip">수면 의료기기 앱 기획, 디자인</span><span class="chip">시장조사 및 리서치</span>
+                </div>
+                <div class="award-item">
+                    2023.02 락앤락 디자인 인턴 <span class="chip">쇼핑몰 배너 디자인 시스템 제작</span>
+                </div>
+                <div class="award-item">
+                    2023.01 SK증권 기획, 디자인 인턴  <span class="chip">신규 서비스 개선안 제안</span>
+                </div>
+                <div class="award-item">
+                    2022.07-2022.08 LX 하우시스 디자인 인턴 <span class="chip">메타버스 인테리어 공간 기획</span>
+                </div>
+                <div class="award-item">
+                    2022.04-2022.06 신세계인터내셔날 JAJU 디자인 인턴 <span class="chip">쇼핑몰 상세페이지 기획</span>
+                </div>
+                </div>
+            <div class="award">
+                <p class="text">Awards</p>
+                 <div class="list">
+                    2024.12  숙명여자대학교 지산학 EXPO 캡스톤디자인경진대회 최우수상 
+                    <br>2024.12  숙명여자대학교 지산학 EXPO Fly Startup Demoday 2등 
+                    <br>2024.05  카카오뱅크, 한국핀테크지원센터 [핀테크 챌린지 지역예선전(서울권)] 장려상
+                    <br>2023.10  제 11회 대한민국 어린이 제품 디자인 공모전 동상
+                    <br>2023.05  제 4회 링글 서비스 기획 공모전 우수상
+                    <br>2022.11  롯데카드 대학생 ESG 아이디어 공모전 우수상
+                    <br>2022.10  제 2회 락앤락 디자인 공모전 금상
+                    <br>2022.08  2022 SK증권 DT 아이디어 공모전 대상
+                    <br>2022.07  KB Pay 아이디어 공모전 대상
+                    <br>2022.06  제 2회 LX Z:IN 인테리어 디자인 공모전 제품 디자인 부문 금상
+                    <br>2022.02  Shapl Design Contest Samsung Prize
+                    <br>2021.12  용산구 지역활성화 서포터즈 우수활동자 최우수상(서울시장상)
+                    <br>2021.11  용산구 모범구민 표창장
+                    <br>2021.11  세종대학교캠퍼스타운사업단 창업아이템 공모전 대학부 우수상
+                    <br>2021.10  대한민국디자인전람회 Winner
+                    <br>2021.10  제 8회 LED/OLED 조명 제품 디자인 및 사업화 아이디어 공모전 입상
+                    <br>2021.08  숙명여자대학교 스티브 미니창업경진대회 우수상
+                    <br>2021.07  2021년 사회적기업가 육성사업 창업팀 선정
+                    <br>2020.09  삼화페인트 페인트캔 업사이클링 공모전 대상
+            </div>
+        </main>
+</body>
+</html>

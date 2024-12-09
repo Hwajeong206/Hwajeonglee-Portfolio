@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sleepkit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+    }
+
+    .scroll-container {
+      display: flex;
+      flex-direction: column; /* 수직 나열 */
+      align-items: center; /* 이미지들을 화면 가운데 정렬 */
+      overflow-y: auto; /* 세로 스크롤 */
+      height: 100vh;
+      padding-bottom: 120px; /* 상하 여백 */
+      box-sizing: border-box;
+    }
+
+    /* 이미지 컨테이너 */
+    .image-item {
+      flex: 0 0 auto;
+      margin: 100px auto; /* 수직 정렬 및 여백 */
+    }
+
+    /* 이미지 스타일 */
+    .image-item img {
+      display: block;
+      max-width: 1200px;
+      height: auto;
+    }
+
+.fixed-button {
+    position: fixed; /* 화면에 고정 */
+    bottom: 90px; /* 화면 아래에서 60px 위에 위치 */
+    left: 50%; /* 수평 가운데 정렬 */
+    transform: translateX(-50%); /* 버튼을 정확히 가운데로 정렬 */
+    padding: 18px 20px; /* 버튼 크기 */
+    font-size: 26px;
+    font-weight:bold;
+    letter-spacing: -0.5px; /* 자간 줄이기 */
+    background-color: rgba(0, 0, 0, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    color: #ffffff; /* 텍스트 색상 */
+    border: none;
+    border-radius: 16px; /* 둥근 모서리 */
+    cursor: pointer;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    
+    transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 텍스트 색상이 0.3초 동안 자연스럽게 변환 */
+}
+
+.fixed-button:hover {
+    background-color: rgba(0, 0, 0, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    color: #00C2FF; /* 텍스트 색상 */
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 좌우로 요소 배치 */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 8px 35px;
+    background-color: rgba(255, 255, 255, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden; /* 내용 넘침 방지 */
+}
+
+/* 왼쪽 아이템 스타일 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+}
+
+.nav-image {
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image:hover {
+    transform: scale(1.1);
+}
+
+/* 오른쪽 버튼 스타일 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+    margin-right: 80px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+    <a href="index.html">
+      <img src="logo.svg" alt="Hwajeong" class="nav-image">
+    </div>
+  </a>
+  <div class="nav-right">
+    <a href="profile.html" class="nav-button">About me</a>
+</div>
+</nav>
+  <div class="scroll-container">
+    <!-- 이미지 리스트 -->
+    <div class="image-item"><img src="조물주 최종.png" alt="사진 1"></div>
+  </div>
+
+ 
+  <a href="https://www.sunmulzu.com" target="_blank" class="fixed-button">사이트 바로가기</a>
+</button>
+
+</body>
+</html>
