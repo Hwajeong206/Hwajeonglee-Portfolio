@@ -24,7 +24,7 @@
     /* 이미지 컨테이너 */
     .image-item {
       flex: 0 0 auto;
-      margin: 100px auto; /* 수직 정렬 및 여백 */
+      margin-top: 100px; /* 수직 정렬 및 여백 */
     }
 
     /* 이미지 스타일 */
@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     flex-shrink: 0; /* 축소 방지 */
-    margin-right: 80px;
+    margin-right: 70px;
 }
 
 .nav-button {
@@ -85,6 +85,59 @@
 .nav-button:hover {
   transform: scale(1.1);
 }
+
+/* 반응형 스타일 */
+@media (max-width: 767px) {
+            main {
+                position: absolute; /* header를 고정 */
+                 top: 100px; /* 위쪽 여백 */
+                 left: 40px; /* 왼쪽 여백 */
+                flex-direction: column;
+                align-items: flex-start; /* 왼쪽 정렬 */
+                gap: 50px;
+                font-size:25px;
+            }
+
+            /* 이미지 스타일 */
+    .image-item img {
+      display: block;
+      max-width: 350px;
+      height: auto;
+      
+      margin-top: -32px; /* 수직 정렬 및 여백 */
+    }
+
+    .nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+        .fixed-button {
+    position: fixed; /* 화면에 고정 */
+    bottom: 90px; /* 화면 아래에서 60px 위에 위치 */
+    left: 50%; /* 수평 가운데 정렬 */
+    transform: translateX(-50%); /* 버튼을 정확히 가운데로 정렬 */
+    padding: 14px 12px; /* 버튼 크기 */
+    font-size: 16px;
+    font-weight:bold;
+    letter-spacing: -0.5px; /* 자간 줄이기 */
+    background-color: rgba(0, 0, 0, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    color: #ffffff; /* 텍스트 색상 */
+    border: none;
+    border-radius: 12px; /* 둥근 모서리 */
+    cursor: pointer;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 텍스트 색상이 0.3초 동안 자연스럽게 변환 */
+}
+        }
 
   </style>
 </head>
