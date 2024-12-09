@@ -17,41 +17,92 @@
       align-items: center; /* 이미지들을 화면 가운데 정렬 */
       overflow-y: auto; /* 세로 스크롤 */
       height: 100vh;
-      padding: 60px 0px; /* 상하 여백 */
+      padding-bottom: 120px; /* 상하 여백 */
       box-sizing: border-box;
     }
 
     /* 이미지 컨테이너 */
     .image-item {
       flex: 0 0 auto;
-      margin: 10px auto; /* 수직 정렬 및 여백 */
+      margin: 100px auto; /* 수직 정렬 및 여백 */
     }
 
     /* 이미지 스타일 */
     .image-item img {
       display: block;
-      max-width: 800px;
+      max-width: 1200px;
       height: auto;
     }
+
+
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 좌우로 요소 배치 */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 8px 35px;
+    background-color: rgba(255, 255, 255, 0.088); /* 반투명 배경 */
+    backdrop-filter: blur(30px); /* 블러 효과 */
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden; /* 내용 넘침 방지 */
+}
+
+/* 왼쪽 아이템 스타일 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+}
+
+.nav-image {
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image:hover {
+    transform: scale(1.1);
+}
+
+/* 오른쪽 버튼 스타일 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* 축소 방지 */
+    margin-right: 80px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
 
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-left">
+    <a href="index.html">
+      <img src="logo.svg" alt="Hwajeong" class="nav-image">
+    </div>
+  </a>
+  <div class="nav-right">
+    <a href="profile.html" class="nav-button">About me</a>
+</div>
+</nav>
   <div class="scroll-container">
     <!-- 이미지 리스트 -->
-    <div class="image-item"><img src="port2-1.png" alt="사진 1"></div>
-    <div class="image-item"><img src="port2-2.png" alt="사진 2"></div>
-    <div class="image-item"><img src="port2-3.png" alt="사진 3"></div>
-    <div class="image-item"><img src="port2-4.png" alt="사진 4"></div>
-    <div class="image-item"><img src="port2-5.png" alt="사진 5"></div>
-    <div class="image-item"><img src="port2-6.png" alt="사진 6"></div>
-    <div class="image-item"><img src="port2-7.png" alt="사진 7"></div>
-    <div class="image-item"><img src="port2-8.png" alt="사진 8"></div>
-    <div class="image-item"><img src="port2-9.png" alt="사진 9"></div>
-    <div class="image-item"><img src="port2-10.png" alt="사진 10"></div>
-    <div class="image-item"><img src="port2-11.png" alt="사진 11"></div>
+    <div class="image-item"><img src="sleepkit.png" alt="사진 1"></div>
   </div>
-
 
 </body>
 </html>
