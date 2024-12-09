@@ -173,9 +173,13 @@
       display: block;
       max-width: 350px;
       height: auto;
-      margin-bottom: 70px;
     }
 
+    .image-item3 img {
+      display: block;
+      max-width: 350px;
+      height: auto;
+    }
 
     .nav-button {
     color: white;
@@ -189,15 +193,25 @@
     transition: transform 0.3s ease;
 }
 
-.video-container1 {
-    margin-top: 70px; /* 수직 정렬 및 여백 */
+.video-container1{
             width: 350px;
             height: auto; /* 비율 유지 */
         }
 
-.video-container2 {
+.video-container1 iframe{
+    margin-top: -30px; /* 수직 정렬 및 여백 */
+            width: 350px;
+            height: 198px; /* 비율 유지 */
+        }
+
+        .video-container2{
             width: 350px;
             height: auto; /* 비율 유지 */
+        }
+
+.video-container2 iframe {
+            width: 350px;
+            height: 482px; /* 비율 유지 */
         }
 
         .fixed-button {
@@ -218,6 +232,7 @@
     text-decoration: none; /* 링크 밑줄 제거 */
     transition: background-color 0.3s ease, color 0.3s ease; /* 배경색과 텍스트 색상이 0.3초 동안 자연스럽게 변환 */
 }
+
         }
 
 
@@ -237,11 +252,7 @@
   <div class="scroll-container">
     <!-- 이미지 리스트 -->
     <div class="video-container1">
-        <video autoplay muted loop playsinline>
-            <source src="메인영상.mp4" type="video/mp4">
-            <!-- 대체 텍스트 -->
-            브라우저가 MP4 영상을 지원하지 않습니다.
-        </video>
+        <iframe src="https://player.vimeo.com/video/1037515887?background=1" width="1200" height="675" frameborder="0" allow="autoplay; picture-in-picture" sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"></iframe>
     </div>
 <div class="video-container2">
 <video autoplay muted loop playsinline>
@@ -253,11 +264,7 @@
     <div class="image-item"><img src="teengrr1.png" alt="사진 1"></div>
 
     <div class="video-container2">
-        <video autoplay muted loop playsinline>
-                    <source src="애니메이션작동수정.mp4" type="video/mp4">
-                    <!-- 대체 텍스트 -->
-                    브라우저가 MP4 영상을 지원하지 않습니다.
-                </video>
+        <iframe src="https://player.vimeo.com/video/1037515621?background=1" width="1200" height="1650" frameborder="0" allow="autoplay; picture-in-picture" sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups"></iframe>
             </div>
    <div class="image-item"><img src="teengrr2.png" alt="사진 1"></div>
    <div class="image-item2"><img src="teengrr3.png" alt="사진 1"></div>
