@@ -57,7 +57,7 @@
 header {
     position: absolute; /* header를 고정 */
     top: 170px; /* 위쪽 여백 */
-    left: 130px; /* 왼쪽 여백 */
+    left: 100px; /* 왼쪽 여백 */
     color: #ffffff;
     letter-spacing: -0.5px;
     gap: 90px;
@@ -72,14 +72,14 @@ main {
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
     gap: 150px;
-    font-size: 30px;
+    font-size: 24px;
     width: 100%; /* 부모 요소가 화면 너비를 다 차지하게 설정 */
 }
 
 .hover-menu {
     position:absolute;  /* 이미지 컨테이너 위치를 기준으로 조정하기 위해 설정 */
     top: 400px;
-    left: 120px; /* 왼쪽 여백 */
+    left: 80px; /* 왼쪽 여백 */
     display: flex;
   flex-direction: column;
   height: 100vh; /* 화면 높이를 100% 사용 */
@@ -88,7 +88,7 @@ main {
   gap:80px;
 }
 
-.accordion {
+.accordion{
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
@@ -97,7 +97,7 @@ main {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 24px;
+  font-size: 20px !important;;
   transition: 0.4s;
   border-bottom: 2px solid #ffffff;
 }
@@ -114,7 +114,7 @@ main {
 }
 
 .text{
-    margin: 20px;
+    margin-bottom: 20px;
     color: white;
 }
 
@@ -167,8 +167,8 @@ main {
     display: block;
     width: 100%; /* 이미지가 컨테이너를 가득 채우도록 설정 */
     height: auto;
-    max-width:1440px;
-    padding: 30px;
+    max-width:1200px;
+    padding: 24px;
     transition: filter 0.5s ease; /* 필터를 부드럽게 전환 */
 }
 
@@ -184,7 +184,7 @@ main {
     position: fixed;
     width: 100%;
     top:0px;
-    padding: 8px 35px;
+    padding: 7px 35px;
     background-color: rgba(255, 255, 255, 0.088); /* 반투명 배경 */
     backdrop-filter: blur(30px); /* 블러 효과 */
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
@@ -213,7 +213,7 @@ main {
     display: flex;
     align-items: center;
     flex-shrink: 0; /* 축소 방지 */
-    margin-right: 80px;
+    margin-right: 0px;
 }
 
 .nav-button {
@@ -232,19 +232,46 @@ main {
         @media (max-width: 767px) {
             header {
                 position: absolute; /* header를 고정 */
-                 top: 80px; /* 위쪽 여백 */
-                 left: 60px; /* 왼쪽 여백 */
+                 top: 100px; /* 위쪽 여백 */
+                 left: 40px; /* 왼쪽 여백 */
                 flex-direction: column;
                 align-items: flex-start; /* 왼쪽 정렬 */
                 gap: 20px;
             }
+
+            .accordion{
+                padding: 16px;
+                font-size:16px !important;
+
+            }
+            
             main {
                 position: absolute; /* header를 고정 */
-                 top: 40px; /* 위쪽 여백 */
-                 left: -60px; /* 왼쪽 여백 */
+                 top: 0px; /* 위쪽 여백 */
+                 left: -40px; /* 왼쪽 여백 */
                 flex-direction: column;
                 align-items: flex-start; /* 왼쪽 정렬 */
+                font-size: 20px;
             }
+
+            .arrow{
+    max-width:16px;
+    margin-left: 20px;
+    filter: invert(100%);
+ }
+
+            .nav-button {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.nav-image {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
         }
      
     </style>
