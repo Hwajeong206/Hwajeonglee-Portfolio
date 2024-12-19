@@ -22,6 +22,10 @@
     min-height: 100vh;
     background-color: #000000;
 }
+        
+:lang(ko) {
+  font-family: "Suit", sans-serif;
+}
 
         html, body {
         height: 100%; /* html과 body가 화면 전체를 차지하게 설정 */
@@ -322,6 +326,11 @@ main {
 }
 
         }
+
+        .horizone-container{
+            font-size: 20px;
+        }
+
      
     </style>
 </head>
@@ -490,7 +499,7 @@ function animateCounter(elementId, start, end, duration) {
         }
 
         // 숫자 애니메이션 시작: 0부터 2000까지 1초 동안
-        animateCounter('counter2', 0, 19, 2000);
+        animateCounter('counter2', 0, 17, 2000);
 
         function animateCounter(elementId, start, end, duration) {
             const element = document.getElementById(elementId);
@@ -510,7 +519,7 @@ function animateCounter(elementId, start, end, duration) {
         }
 
         // 숫자 애니메이션 시작: 0부터 2000까지 1초 동안
-        animateCounter('counter3', 0, 7, 3000);
+        animateCounter('counter3', 0, 6, 3000);
 </script>  
 </body>
 </html>
