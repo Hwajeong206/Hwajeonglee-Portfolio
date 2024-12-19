@@ -22,10 +22,15 @@
     background-color: #000000;
 }
 
-/* 한국어 텍스트에만 Suit 폰트 적용 */
-:lang(ko) {
-    font-family: "Suit", sans-serif;
-}
+ /* 한국어 텍스트에만 Suit 폰트 적용 */
+        *:lang(ko) {
+            font-family: 'Suit', sans-serif;
+        }
+
+        /* 영어 텍스트에 Archivo 유지 */
+        *:lang(en) {
+            font-family: 'Archivo', sans-serif;
+        }
 
       html, body {
         height: 100%; /* html과 body가 화면 전체를 차지하게 설정 */
@@ -335,18 +340,32 @@ main {
      #counter3 {
         font-size: 40px;
     }
-            .horizontal-container {
+            
+ .horizontal-container {
     position: absolute;
     top: 300px;
     display: flex;
     flex-direction: column; /* 수직 방향으로 정렬 */            
-   width: auto; /* 필요에 따라 너비 조정 */
+   width: 100% /* 필요에 따라 너비 조정 */
     gap: 8px;
     left: 80px;
 }
+.hover-menu {
+    position:absolute;  /* 이미지 컨테이너 위치를 기준으로 조정하기 위해 설정 */
+    top: 700px;
+    left: 80px; /* 왼쪽 여백 */
+    display: flex;
+  flex-direction: column;
+  height: 100vh; /* 화면 높이를 100% 사용 */
+  margin: 0;
+  padding: 0;
+  gap:80px;
+}
 
-            .text{
-                font-size: 14px;
+
+ .text{
+ font-size: 14px;
+ }
 
         }
 
